@@ -108,15 +108,27 @@ document.body.onscroll = function() {
   }
 };
 var scroll = document.querySelector(".scroll-bar");
+var detSlide = document.querySelectorAll(".det-none");
 document
   .querySelector(".det-btn .button")
   .addEventListener("click", function() {
     scroll.classList.add("active");
+    detSlide.forEach((val, ind) => {
+      val.classList.add("det-animate-" + (ind + 1));
+    });
   });
+
+scroll.addEventListener("transitionend", function() {
+  if (!scroll.classList.contains("active"))
+    detSlide.forEach((val, ind) => {
+      val.classList.remove("det-animate-" + (ind + 1));
+    });
+});
 
 document
   .querySelector(".close-btn .button")
   .addEventListener("click", function() {
+    console.log("----------");
     scroll.classList.remove("active");
   });
 //-------------------------Pranjali JS--------------------------------
