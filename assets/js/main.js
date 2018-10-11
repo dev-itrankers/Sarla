@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 var header = document.querySelector(".prod-list-ul");
+
 var links = header.querySelector(".deactive > a");
 for (var i = 0; i < links.length; i++) {
   links[i].addEventListener("click", function() {
@@ -107,8 +108,9 @@ document.body.onscroll = function() {
       .classList.remove("navbar-burger-h");
   }
 };
-var scroll = document.querySelector(".scroll-bar");
-var detSlide = document.querySelectorAll(".det-none");
+var scroll = document.querySelector(".scroll-bar"),
+  detSlide = document.querySelectorAll(".det-none"),
+  prodGradient = document.querySelector(".prod-details");
 document
   .querySelector(".det-btn .button")
   .addEventListener("click", function() {
@@ -116,12 +118,18 @@ document
     detSlide.forEach((val, ind) => {
       val.classList.add("det-animate-" + (ind + 1));
     });
+    current.style.fontSize = "1.6rem";
+    prodGradient.style.background =
+      "linear-gradient(rgba(0, 0, 0, 0.0),rgba(0,0,0,0.6)),url(../../assets/images/prod_img.jpg)";
   });
 
 scroll.addEventListener("transitionend", function() {
   if (!scroll.classList.contains("active"))
     detSlide.forEach((val, ind) => {
       val.classList.remove("det-animate-" + (ind + 1));
+      current.style.fontSize = "2rem";
+      prodGradient.style.background =
+        "linear-gradient(rgba(0, 0, 0, 0.0),rgba(0,0,0,0)),url(../../assets/images/prod_img.jpg)";
     });
 });
 
