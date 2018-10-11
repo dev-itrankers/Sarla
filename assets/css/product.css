@@ -125,7 +125,7 @@ a:hover {
 .prod-details {
   height: 100vh;
   color: white;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   background-image: url(../../assets/images/prod_img.jpg);
   background-repeat: no-repeat;
   /* background-size: 100%; */
