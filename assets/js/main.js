@@ -120,7 +120,7 @@ document
     });
     current.style.fontSize = "1.6rem";
     prodGradient.style.background =
-      "linear-gradient(rgba(0, 0, 0, 0.0),rgba(0,0,0,0.6)),url(../../assets/images/prod_img.jpg)";
+      "linear-gradient(rgba(0, 0, 0, 0.0),rgba(0,0,0,0.6)),url(assets/images/prod_img.jpg)";
   });
 
 scroll.addEventListener("transitionend", function() {
@@ -129,7 +129,7 @@ scroll.addEventListener("transitionend", function() {
       val.classList.remove("det-animate-" + (ind + 1));
       current.style.fontSize = "2rem";
       prodGradient.style.background =
-        "linear-gradient(rgba(0, 0, 0, 0.0),rgba(0,0,0,0)),url(../../assets/images/prod_img.jpg)";
+        "linear-gradient(rgba(0, 0, 0, 0.0),rgba(0,0,0,0)),url(assets/images/prod_img.jpg)";
     });
 });
 
