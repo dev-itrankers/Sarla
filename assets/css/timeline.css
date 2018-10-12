@@ -150,3 +150,11 @@ text-align: right;
   font-size: 1.3em;
   }
 }
+
+body{
+  scroll-snap-type: y mandatory;
+}
+
+section{
+  scroll-snap-align: start;
+}
