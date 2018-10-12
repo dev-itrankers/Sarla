@@ -18,14 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
 var header = document.querySelector(".prod-list-ul");
 var links = header.querySelector(".deactive > a");
 for (var i = 0; i < links.length; i++) {
-  links[i].addEventListener("click", function() {
+  links[i].addEventListener("click", function () {
     var current = document.querySelector(".active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
 }
 var current = document.querySelector(".prod-item.active");
-window.addEventListener("keydown", function(e) {
+window.addEventListener("keydown", function (e) {
   var key = e.keyCode ? e.keyCode : e.which;
   if ([40, 38].includes(key)) e.preventDefault();
 });
@@ -33,13 +33,13 @@ window.addEventListener("keyup", changeSelectedProduct);
 
 document
   .querySelector(".prod-list-ul li:first-child")
-  .addEventListener("click", function() {
+  .addEventListener("click", function () {
     changeSelectedProduct({ keyCode: 38 });
   });
 
 document
   .querySelector(".prod-list-ul li:last-child")
-  .addEventListener("click", function() {
+  .addEventListener("click", function () {
     changeSelectedProduct({ keyCode: 40 });
   });
 
@@ -86,14 +86,15 @@ function changeSelectedProduct(e) {
     // current.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 }
-document.body.onscroll = function() {
+document.body.onscroll = function () {
   var y = document.body.getBoundingClientRect().y;
+  console.log(y);
   if (y < 30) {
     document.querySelector("html").classList.add("navbar-pt");
     document.querySelector(".navbar-brand").classList.add("navbar-mh");
     document.querySelector(".navbar").classList.add("navbar-mh");
     document.querySelector(".navbar").classList.add("border");
-    document.querySelectorAll(".navbar-dropdown").forEach(function(val) {
+    document.querySelectorAll(".navbar-dropdown").forEach(function (val) {
       val.classList.add("navbar-dropdown-onscroll");
     });
     document.querySelector(".navbar-item").classList.add("navbar-item-p");
@@ -104,7 +105,7 @@ document.body.onscroll = function() {
     document.querySelector(".navbar-brand").classList.remove("navbar-mh");
     document.querySelector(".navbar").classList.remove("navbar-mh");
     document.querySelector(".navbar").classList.remove("border");
-    document.querySelectorAll(".navbar-dropdown").forEach(function(val) {
+    document.querySelectorAll(".navbar-dropdown").forEach(function (val) {
       val.classList.remove("navbar-dropdown-onscroll");
     });
     document.querySelector(".navbar-item").classList.remove("navbar-item-p");
@@ -118,7 +119,7 @@ var scroll = document.querySelector(".scroll-bar"),
   prodGradient = document.querySelector(".prod-details");
 document
   .querySelector(".det-btn .button")
-  .addEventListener("click", function() {
+  .addEventListener("click", function () {
     scroll.classList.add("active");
     current.classList.add("smallfont");
     detSlide.forEach((val, ind) => {
@@ -128,7 +129,7 @@ document
       "linear-gradient(rgba(0, 0, 0, 0.0),rgba(0,0,0,0.6)),url(assets/images/prod_img.jpg)";
   });
 
-scroll.addEventListener("transitionend", function() {
+scroll.addEventListener("transitionend", function () {
   if (!scroll.classList.contains("active"))
     detSlide.forEach((val, ind) => {
       val.classList.remove("det-animate-" + (ind + 1));
@@ -139,7 +140,7 @@ scroll.addEventListener("transitionend", function() {
 
 document
   .querySelector(".close-btn .button")
-  .addEventListener("click", function() {
+  .addEventListener("click", function () {
     scroll.classList.remove("active");
     current.classList.remove("smallfont");
   });
@@ -167,7 +168,7 @@ function scrollInView(e) {
 document
   .querySelectorAll(".scroll-nav")
   .forEach(a => a.addEventListener("click", scrollInView));
-window.addEventListener("scroll", function(e) {
+window.addEventListener("scroll", function (e) {
   var connectTop = scrollTarget["contact-form"].getBoundingClientRect().top;
   // console.log(connectTop, window.innerHeight * 0.6);
   if (connectTop < window.innerHeight * 0.6 && connectTop > 10) {

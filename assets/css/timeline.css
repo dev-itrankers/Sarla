@@ -290,7 +290,6 @@ text-align: right;
 }
 
 footer {
-  height: 466px;
   padding: 52px 111px;
   background-color: #f6f6f6;
 }
@@ -466,6 +465,12 @@ ul {
   #timeline .years p #timeline .year-1999 p{
   font-size: 1.3em;
   }
+  #timeline .year-1996{
+    background-size: cover;
+  }
+   #timeline .year-1993{
+    background-size: cover;
+  } 
 }
 
 body{
