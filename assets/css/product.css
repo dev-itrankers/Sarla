@@ -126,8 +126,8 @@ a:hover {
   height: 100vh;
   color: white;
   background-image: url(../../assets/images/prod_img.jpg);
-  background-repeat: no-repeat;
-  /* background-size: 100%; */
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
   background-position: 0% 30%;
   padding: 7.5rem 4rem 7.5rem;
 }
@@ -287,6 +287,7 @@ a:hover {
 }
 table {
   color: black;
+  width: auto;
 }
 table th {
   box-sizing: border-box;
@@ -545,6 +546,7 @@ ul {
     background-size: auto;
     background-position: left !important;
   }
+
   .hero.is-fullheight {
     min-height: calc(100vh-36px);
   }
@@ -552,6 +554,9 @@ ul {
     background-size: auto;
     background-position: left;
     height: auto;
+  }
+  .details {
+    overflow-x: scroll;
   }
   .further-info .title {
     font-size: 20%;
@@ -592,6 +597,12 @@ ul {
   .footer {
     display: block;
     padding: 0 !important;
+  }
+  .contact-form {
+    margin-top: 30px !important;
+  }
+  .submit-btn {
+    margin-top: 20px;
   }
   .footer-left {
     /* display: flex; */
@@ -642,6 +653,9 @@ ul {
   .copyright {
     padding-top: 30px;
   }
+  .details {
+    overflow-x: scroll;
+  }
   .further-info .title {
     font-size: 260%;
     /* font-size: 2rem; */
@@ -666,6 +680,9 @@ ul {
     height: auto;
     overflow: hidden;
   }
+  .details {
+    overflow-x: scroll;
+  }
   .footer {
     padding: 15px 30px !important;
   }
@@ -676,6 +693,9 @@ ul {
     height: auto;
     background-size: auto;
     background-position: left -3.5em !important;
+  }
+  .details {
+    overflow-x: scroll;
   }
   .prod-details {
     height: auto;

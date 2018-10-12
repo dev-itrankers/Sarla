@@ -113,37 +113,7 @@ document.body.onscroll = function() {
       .classList.remove("navbar-burger-h");
   }
 };
-var scroll = document.querySelector(".scroll-bar"),
-  detSlide = document.querySelectorAll(".det-none"),
-  prodGradient = document.querySelector(".prod-details");
-document
-  .querySelector(".det-btn .button")
-  .addEventListener("click", function() {
-    scroll.classList.add("active");
-    current.classList.add("smallfont");
-    detSlide.forEach((val, ind) => {
-      val.classList.add("det-animate-" + (ind + 1));
-    });
-    prodGradient.style.background =
-      "linear-gradient(rgba(0, 0, 0, 0.0),rgba(0,0,0,0.6)),url(assets/images/prod_img.jpg)";
-  });
-
-scroll.addEventListener("transitionend", function() {
-  if (!scroll.classList.contains("active"))
-    detSlide.forEach((val, ind) => {
-      val.classList.remove("det-animate-" + (ind + 1));
-      prodGradient.style.background =
-        "linear-gradient(rgba(0, 0, 0, 0.0),rgba(0,0,0,0)),url(assets/images/prod_img.jpg)";
-    });
-});
-
-document
-  .querySelector(".close-btn .button")
-  .addEventListener("click", function() {
-    scroll.classList.remove("active");
-    current.classList.remove("smallfont");
-  });
-//-------------------------Pranjali JS--------------------------------
+//-------------------------Pranjali JS contact scroll--------------------------------
 var scrollTarget = {
   "contact-form": document.querySelector(".contact-form")
 };
@@ -158,7 +128,6 @@ function prevent(e) {
 function scrollInView(e) {
   var target = e.target;
   if (!target.hasAttribute("target")) target = target.parentElement;
-  // console.log(scrollTarget[target.getAttribute("target")]);
   scrollTarget[target.getAttribute("target")].scrollIntoView({
     behavior: "smooth",
     block: "nearest"
@@ -178,12 +147,38 @@ window.addEventListener("scroll", function(e) {
     document.querySelector(".product").classList.add("nav-active");
   }
 });
+/*--------------------------details button js---------------------- */
 
-// document.querySelectorAll(".navbar-item").forEach(function(val) {
-//   val.addEventListener("mouseover", function(e) {
-//     val.classList.remove("nav-active");
-//   });
-//   val.addEventListener("mouseleave", function(e) {
-//     val.classList.add("nav-active");
-//   });
-// });
+var scroll = document.querySelector(".scroll-bar"),
+  detSlide = document.querySelectorAll(".det-none"),
+  prodDetails = document.querySelector(".prod-details");
+document.querySelector(".det-btn").addEventListener("click", function(e) {
+  var target = this.getAttribute("target");
+  prodDetails.scrollIntoView({
+    behavior: "smooth",
+    block: "nearest"
+  });
+  scroll.classList.add("active");
+  current.classList.add("smallfont");
+  detSlide.forEach((val, ind) => {
+    val.classList.add("det-animate-" + (ind + 1));
+  });
+  prodDetails.style.background =
+    "linear-gradient(rgba(0, 0, 0, 0.0),rgba(0,0,0,0.6)),url(assets/images/prod_img.jpg)";
+});
+
+scroll.addEventListener("transitionend", function() {
+  if (!scroll.classList.contains("active"))
+    detSlide.forEach((val, ind) => {
+      val.classList.remove("det-animate-" + (ind + 1));
+      prodDetails.style.background =
+        "linear-gradient(rgba(0, 0, 0, 0.0),rgba(0,0,0,0)),url(assets/images/prod_img.jpg)";
+    });
+});
+
+document
+  .querySelector(".close-btn .button")
+  .addEventListener("click", function() {
+    scroll.classList.remove("active");
+    current.classList.remove("smallfont");
+  });
