@@ -95,7 +95,7 @@ a:hover {
   background-image: url(../../assets/images/product-hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center -12.5em;
+  background-position: center !important;
 }
 .is-fullheight {
   min-height: calc(100vh - 36px);
@@ -125,7 +125,6 @@ a:hover {
 .prod-details {
   height: 100vh;
   color: white;
-  overflow-x: hidden;
   background-image: url(../../assets/images/prod_img.jpg);
   background-repeat: no-repeat;
   /* background-size: 100%; */
@@ -143,6 +142,7 @@ a:hover {
   cursor: pointer;
 }
 .prod-list-ul .active {
+  transition: ease-in-out 0.3s all;
   font-size: 2rem;
   font-weight: 500;
   /* border-bottom: 2px solid black; */
@@ -151,6 +151,9 @@ a:hover {
   display: flex;
   margin-top: -1.6rem;
   justify-content: space-between;
+}
+.prod-item a {
+  color: white !important;
 }
 .det-arrow {
   margin-left: 1em;
@@ -183,11 +186,12 @@ a:hover {
   font-size: 1rem;
 }
 .close-btn {
-  float: right;
   margin: 0.6em;
   position: absolute;
   background-attachment: fixed;
   right: 0em;
+  cursor: pointer;
+  z-index: 10;
 }
 .close-btn a {
   font-size: 0.7rem;
@@ -217,7 +221,9 @@ a:hover {
 .details {
   padding-top: 1.1%;
   padding-left: 3.6%;
-  max-width: 45rem;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .prod-details {
   position: relative;
@@ -227,12 +233,11 @@ a:hover {
   right: 0;
   top: 0;
   bottom: 0;
+  /* opacity: 0; */
   transition: all 600ms linear;
   transform: translateX(100%);
   background-color: #fff;
   color: black;
-  overflow-x: hidden;
-  overflow-y: scroll;
   z-index: 1;
   min-width: 65%;
 }
@@ -245,13 +250,14 @@ a:hover {
 .availables {
   opacity: 1;
 } */
-.scroll-bar.active > .features {
+/* .scroll-bar.active > .features {
   animation-name: sfade;
   animation-delay: 400ms;
   animation-duration: 0.3s;
   animation-direction: forwards;
 }
-.scroll-bar.active > .application {
+.scroll-bar
+.active > .application {
   animation-name: sfade;
   animation-delay: 600ms;
   animation-duration: 0.3s;
@@ -262,7 +268,7 @@ a:hover {
   animation-delay: 800ms;
   animation-duration: 0.3s;
   animation-direction: forwards;
-}
+} */
 
 .details-heading {
   margin-top: 0;
@@ -537,7 +543,7 @@ ul {
 @media screen and (max-width: 480px) {
   .hero {
     background-size: auto;
-    background-position: left;
+    background-position: left !important;
   }
   .hero.is-fullheight {
     min-height: calc(100vh-36px);
@@ -548,7 +554,7 @@ ul {
     height: auto;
   }
   .further-info .title {
-    font-size: 25px;
+    font-size: 20%;
   }
   .further-info .subtitle {
     max-width: 300px;
@@ -567,7 +573,9 @@ ul {
   .subtitle {
     font-size: 17px;
   }
-
+  .prod-list-ul .active {
+    font-size: 1.2rem;
+  }
   .det-btn > a {
     font-size: 0.85rem;
     width: 110px;
@@ -611,24 +619,95 @@ ul {
   .hero .is-fullheight {
     min-height: calc(85vh - 36px);
   }
+  .prod-details {
+    height: auto;
+    overflow: hidden;
+  }
 }
+@media screen and (max-width: 740px) {
+  .hero {
+    background-position: 0rem 0em !important;
+    min-height: 95vh !important;
+  }
+  footer {
+    height: auto;
+    padding: 52px 55px;
+  }
+  .footer {
+    display: block;
+  }
+  .copyright {
+    padding-top: 30px;
+  }
+  .further-info .title {
+    font-size: 260%;
+    /* font-size: 2rem; */
+  }
+  .further-info .subtitle {
+    width: 60%;
+  }
+}
+/* @media screen and (min-width: 740px) {
+  .hero {
+    background-position: 0rem 0em !important;
+  }
+  .footer {
+    padding: 15px 30px !important;
+  }
+} */
 @media screen and (max-width: 924px) {
   .hero .is-fullheight {
     min-height: calc(70vh - 36px);
   }
+  .prod-details {
+    height: auto;
+    overflow: hidden;
+  }
+  .footer {
+    padding: 15px 30px !important;
+  }
 }
 @media screen and (min-width: 481) {
   .hero .is-fullheight {
-    /* min-height: calc(120vh - 36px);
+    min-height: calc(120vh - 36px);
     height: auto;
     background-size: auto;
-    background-position: left -3.5em; */
+    background-position: left -3.5em !important;
   }
   .prod-details {
+    height: auto;
+    overflow: hidden;
   }
 }
 
 /* ===================================keyframes=========================================== */
-@keyframes detail-right-left {
+/* ==========================product details animation============================== */
+.det-none {
+  transform: translateX(500%);
+  transition: all ease-in;
+}
+@keyframes det-animation {
+  from {
+    transform: translateX(450%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+.det-animate-1 {
+  animation: det-animation 0.3s forwards;
+  animation-delay: 100ms;
+}
+.det-animate-2 {
+  animation: det-animation 0.3s forwards;
+  animation-delay: 150ms;
+}
+.det-animate-3 {
+  animation: det-animation 0.3s forwards;
+  animation-delay: 200ms;
+}
+.det-animate-4 {
+  animation: det-animation 1s forwards;
+  animation-delay: 250ms;
 }
 /* background:linear-gradient(rgba(0, 0, 0, 0.0),rgba(0,0,0,0.6)),url(../../assets/images/prod_img.jpg) */
