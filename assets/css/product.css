@@ -92,7 +92,7 @@ a:hover {
 
 /* ==========================================hero================================= */
 .hero {
-  background-image: url(../../assets/images/product-hero.jpg);
+  background-image: url(../images/product-hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center !important;
@@ -125,7 +125,7 @@ a:hover {
 .prod-details {
   height: 100vh;
   color: white;
-  background-image: url(../../assets/images/prod_img.jpg);
+  background-image: url(../images/prod_img.jpg);
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-position: 0% 30%;
