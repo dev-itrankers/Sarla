@@ -6,7 +6,7 @@ body {
   font-size: 10px;
   font-family: "Rubik", sans-serif;
   /* overflow-y: hidden !important; */
-  overflow: hidden;
+  /* overflow-x: hidden; */
 }
 /* ====================================nav bar========================== */
 
@@ -155,6 +155,9 @@ a:hover {
 .prod-item a {
   color: white !important;
 }
+.prod-item.smallfont {
+  font-size: 1rem;
+}
 .det-arrow {
   margin-left: 1em;
 }
@@ -227,6 +230,7 @@ a:hover {
 }
 .prod-details {
   position: relative;
+  overflow-x: hidden;
 }
 .scroll-bar {
   position: absolute;
@@ -362,7 +366,6 @@ table th {
 
 footer {
   height: 466px;
-  width: 100vw;
   padding: 52px 111px;
   background-color: #f6f6f6;
 }
@@ -390,9 +393,9 @@ ul {
   text-transform: uppercase;
 }
 /* .footer-left { */
-  /* padding: 52px 0 84px 111px; */
-  /* font-size: 10px; */
-  /* height: 330px; */
+/* padding: 52px 0 84px 111px; */
+/* font-size: 10px; */
+/* height: 330px; */
 /* } */
 .corporate-office > h4,
 .corporate-office p,
@@ -425,7 +428,8 @@ ul {
   margin-bottom: 20px;
 }
 .copyright {
-  margin-bottom: 85px;
+  /* margin-bottom: 85px; */
+  margin-top: -3%;
   font-size: 8px;
 }
 
@@ -434,7 +438,7 @@ ul {
   height: 20px;
 }
 .wd-325 {
-  width: 325px;
+  width: 100%;
 }
 .ht-101 {
   height: 101px;
@@ -453,6 +457,9 @@ ul {
 }
 .fz-10 {
   font-size: 10px;
+}
+.msg {
+  margin-top: 3rem;
 }
 .footer-right .contact-form > h3 {
   font-style: normal;
@@ -567,7 +574,10 @@ ul {
     font-size: 17px;
   }
   .prod-list-ul .active {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+  }
+  .prod-details {
+    padding: 7.5rem 2rem 7.5rem;
   }
   .det-btn > a {
     font-size: 0.85rem;
@@ -576,7 +586,7 @@ ul {
     margin-left: 2% !important;
   }
   footer {
-    padding: 30px 30px;
+    padding: 10% 10%;
     height: 100%;
   }
   .footer {
@@ -591,7 +601,7 @@ ul {
     /* margin-left: -10px; */
   }
   .wd-325 {
-    width: 80vw !important;
+    width: 100% !important;
   }
   .contact-form {
     margin: 0 0rem 0 0rem;
@@ -624,7 +634,7 @@ ul {
   }
   footer {
     height: auto;
-    padding: 52px 55px;
+    padding: 10% 15%;
   }
   .footer {
     display: block;
