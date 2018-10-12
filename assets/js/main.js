@@ -88,6 +88,7 @@ function changeSelectedProduct(e) {
 }
 document.body.onscroll = function() {
   var y = document.body.getBoundingClientRect().y;
+  console.log(y);
   if (y < 30) {
     document.querySelector("html").classList.add("navbar-pt");
     document.querySelector(".navbar-brand").classList.add("navbar-mh");
@@ -113,7 +114,37 @@ document.body.onscroll = function() {
       .classList.remove("navbar-burger-h");
   }
 };
-//-------------------------Pranjali JS contact scroll--------------------------------
+var scroll = document.querySelector(".scroll-bar"),
+  detSlide = document.querySelectorAll(".det-none"),
+  prodGradient = document.querySelector(".prod-details");
+document
+  .querySelector(".det-btn .button")
+  .addEventListener("click", function() {
+    scroll.classList.add("active");
+    current.classList.add("smallfont");
+    detSlide.forEach((val, ind) => {
+      val.classList.add("det-animate-" + (ind + 1));
+    });
+    prodGradient.style.background =
+      "linear-gradient(rgba(0, 0, 0, 0.0),rgba(0,0,0,0.6)),url(assets/images/prod_img.jpg)";
+  });
+
+scroll.addEventListener("transitionend", function() {
+  if (!scroll.classList.contains("active"))
+    detSlide.forEach((val, ind) => {
+      val.classList.remove("det-animate-" + (ind + 1));
+      prodGradient.style.background =
+        "linear-gradient(rgba(0, 0, 0, 0.0),rgba(0,0,0,0)),url(assets/images/prod_img.jpg)";
+    });
+});
+
+document
+  .querySelector(".close-btn .button")
+  .addEventListener("click", function() {
+    scroll.classList.remove("active");
+    current.classList.remove("smallfont");
+  });
+//-------------------------Pranjali JS--------------------------------
 var scrollTarget = {
   "contact-form": document.querySelector(".contact-form")
 };

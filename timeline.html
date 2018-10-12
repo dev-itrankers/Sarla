@@ -9,132 +9,143 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
     <link rel="stylesheet" href="assets/css/timeline.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" crossorigin="anonymous">
-
+    <script defer src="assets/js/timeline.js"></script>
 </head>
 
 <body id="timeline">
-    <!-- ============================== NAVBAR START ==========================================  -->
-    <!-- <nav class="navbar is-widescreen navbar is-fixed-top" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="#">
-                <img src="assets/images/Logo.jpg">
-            </a>
-        </div>
-        <div class="navbar-menu">
-            <div class="navbar-start">
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link is-uppercase font-size">
-                        the company
-                    </a>
-                    <div class="navbar-dropdown is-capitalized">
-                        <a class="navbar-item">
-                            history and key milestones
-                        </a>
-                        <a class="navbar-item">
-                            company profile
-                        </a>
-                        <a class="navbar-item">
-                            board of directors
-                        </a>
-                        <a class="navbar-item">
-                            vision & mision
-                        </a>
-                        <a class="navbar-item">
-                            new ventures & future plans
-                        </a>
-                        <a class="navbar-item">
-                            innovation @ SPFL
-                        </a>
-                        <a class="navbar-item">
-                            quality policy
-                        </a>
-                    </div>
-                </div>
+    <!-- =================== NAVBAR START ==========================================  -->
+    <header>
+        <nav class="navbar nav-padding is-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#fixme">
+                    <img src="assets/images/Logo.jpg">
+                </a>
 
-                <a class="navbar-item is-uppercase font-size">
-                    global presence
-                </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link is-uppercase font-size">
-                        products
-                    </a>
-                    <div class="navbar-dropdown is-capitalized">
-                        <a class="navbar-item">
-                            textured polyester Yarns
-                        </a>
-                        <a class="navbar-item">
-                            textured nylon stretch Yarns
-                        </a>
-                        <a class="navbar-item">
-                            Bulklon
-                        </a>
-                        <a class="navbar-item">
-                            textured sewing Thread
-                        </a>
-                        <a class="navbar-item">
-                            covered yarns
-                        </a>
-                        <a class="navbar-item">
-                            high tenacity Yarns
-                        </a>
-                    </div>
-                </div>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link is-uppercase font-size">
-                        for investors
-                    </a>
-                    <div class="navbar-dropdown is-capitalized">
-                        <a class="navbar-item">
-                            from the desk of the managing directors
-                        </a>
-                        <a class="navbar-item">
-                            investor information
-                        </a>
-                        <a class="navbar-item">
-                            financial information
-                        </a>
-                        <a class="navbar-item">
-                            press releases
-                        </a>
-                        <a class="navbar-item">
-                            stock information
-                        </a>
-                        <a class="navbar-item">
-                            investor contact
-                        </a>
-                        <a class="navbar-item">
-                            corporate governance
-                        </a>
-                        <a class="navbar-item">
-                            placement document
-                        </a>
-                        <a class="navbar-item">
-                            notice for investor
-                        </a>
-                    </div>
-                </div>
-                <a class="navbar-item is-uppercase font-size">
-                    contact us
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
                 </a>
             </div>
-            <div class="navbar-end">
-                <a class="navbar-item font-size">
-                    NSC 1,006.20
-                    <strong class="has-text-success">&nbsp;+1.55%</strong>
-                    <span class="icon has-text-success">
-                        <i class="fas fa-arrow-up"></i>
-                    </span>
-                </a>
-                <a class="navbar-item font-size">
-                    BSC 1,006.70
-                    <strong class="has-text-danger">&nbsp;-1.55%</strong>
-                    <span class="icon has-text-danger">
-                        <i class="fas fa-arrow-down"></i>
-                    </span>
-                </a>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link is-uppercase">
+                            the company
+                        </a>
+                        <div class="navbar-dropdown nav-dropdown is-capitalized">
+                            <a class="navbar-item">
+                                history and key milestones
+                            </a>
+                            <a class="navbar-item">
+                                company profile
+                            </a>
+                            <a class="navbar-item">
+                                board of directors
+                            </a>
+                            <a class="navbar-item">
+                                vision & mision
+                            </a>
+                            <a class="navbar-item">
+                                new ventures & future plans
+                            </a>
+                            <a class="navbar-item">
+                                innovation @ SPFL
+                            </a>
+                            <a class="navbar-item">
+                                quality policy
+                            </a>
+                        </div>
+                    </div>
+                    <a class="navbar-item is-uppercase">
+                        global presence
+                    </a>
+                    <div class="navbar-item product has-dropdown is-hoverable nav-active">
+                        <a class="navbar-link is-uppercase">
+                            products
+                        </a>
+                        <div class="navbar-dropdown nav-dropdown  is-capitalized">
+                            <a class="navbar-item">
+                                textured polyester Yarns
+                            </a>
+                            <a class="navbar-item">
+                                textured nylon stretch Yarns
+                            </a>
+                            <a class="navbar-item">
+                                Bulklon
+                            </a>
+                            <a class="navbar-item">
+                                textured sewing Thread
+                            </a>
+                            <a class="navbar-item">
+                                covered yarns
+                            </a>
+                            <a class="navbar-item">
+                                high tenacity Yarns
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link is-uppercase">
+                            for investors
+                        </a>
+                        <div class="navbar-dropdown nav-dropdown is-capitalized">
+                            <a class="navbar-item">
+                                from the desk of the managing directors
+                            </a>
+                            <a class="navbar-item">
+                                investor information
+                            </a>
+                            <a class="navbar-item">
+                                financial information
+                            </a>
+                            <a class="navbar-item">
+                                press releases
+                            </a>
+                            <a class="navbar-item">
+                                stock information
+                            </a>
+                            <a class="navbar-item">
+                                investor contact
+                            </a>
+                            <a class="navbar-item">
+                                corporate governance
+                            </a>
+                            <a class="navbar-item">
+                                placement document
+                            </a>
+                            <a class="navbar-item">
+                                notice for investor
+                            </a>
+                        </div>
+                    </div>
+                    <a class="navbar-item is-uppercase scroll-nav contact-us" target="contact-form">
+                        <span>contact us</span>
+                    </a>
+                </div>
+                <div class="navbar-end">
+                    <div class="navbar-item stoke">
+                        <ul>
+                            <li>NSC 1,006.20
+                                <span class="green">
+                                    +1.55%
+                                    <i class="fas fa-arrow-up "></i>
+                                </span>
+                            </li>
+                            <li>BSC 1,006.70
+                                <span class="red">
+                                    -1.55%
+                                    <i class="fas fa-arrow-down"></i>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav> -->
+        </nav>
+    </header>
     <!-- ============================== SECTION YEARS ==========================================  -->
     <section class="hero years is-fullheight">
         <div class="hero-body description-years">
@@ -159,25 +170,24 @@
                     </div>
                     <div class="menu column is-3-mobile">
                         <ul>
-                            <li>1993-1995</li>
-                            <li>1996</li>
-                            <li>1999</li>
+                            <li data-target="hero-1993">1993-1995</li>
+                            <li data-target="hero-1996">1996</li>
+                            <li data-target="hero-1999">1999</li>
                             <li>2004-2005</li>
                             <li>2006</li>
-                            <li>2007-2008</li>
-                            <li>2009-2010</li>
-                            <li>2012-2014</li>
+                            <li data-target="hero-2007">2007-2008</li>
+                            <li data-target="hero-2009">2009-2010</li>
+                            <li data-target="hero-2012"> 2012-2014</li>
                             <li>2015</li>
                             <li>2016</li>
                         </ul>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
     <!-- ============================== SECTION YEAR-1993 ==========================================  -->
-    <section class="hero year-1993 is-fullheight">
+    <section class="hero year-1993 is-fullheight" id="hero-1993">
         <div class="hero-body description-1993">
             <div class="container has-text-white">
                 <div class="columns is-mobile">
@@ -193,14 +203,14 @@
                     </div>
                     <div class="menu column is-3-mobile">
                         <ul>
-                            <li class="active-fontsize">1993-1995</li>
-                            <li>1996</li>
-                            <li>1999</li>
+                            <li class="active-fontsize" id="hero-1993">1993-1995</li>
+                            <li data-target="hero-1996">1996</li>
+                            <li data-target="hero-1999">1999</li>
                             <li>2004-2005</li>
                             <li>2006</li>
-                            <li>2007-2008</li>
-                            <li>2009-2010</li>
-                            <li>2012-2014</li>
+                            <li data-target="hero-2007">2007-2008</li>
+                            <li data-target="hero-2009">2009-2010</li>
+                            <li data-target="hero-2012">2012-2014</li>
                             <li>2015</li>
                             <li>2016</li>
                         </ul>
@@ -210,7 +220,7 @@
         </div>
     </section>
     <!-- ============================== SECTION YEAR-1995 ==========================================  -->
-    <section class="hero year-1995 is-fullheight">
+    <section class="hero year-1995 is-fullheight" id="hero-1995">
         <div class="hero-body description-1995">
             <div class="container has-text-white">
                 <div class="columns is-mobile">
@@ -227,14 +237,14 @@
                     </div>
                     <div class="menu column is-3-mobile">
                         <ul>
-                            <li>1993</li>
+                            <li data-target="hero-1993">1993</li>
                             <li class="active-fontsize">1995</li>
-                            <li>1996</li>
-                            <li>1999</li>
+                            <li data-target="hero-1996">1996</li>
+                            <li data-target="hero-1999">1999</li>
                             <li>2004</li>
                             <li>2005</li>
                             <li>2006</li>
-                            <li>2007</li>
+                            <li data-target="hero-2007">2007</li>
                             <li>2008</li>
                             <li>2009</li>
                         </ul>
@@ -244,7 +254,7 @@
         </div>
     </section>
     <!-- ============================== SECTION YEARS-1996 ==========================================  -->
-    <section class="hero year-1996 is-fullheight">
+    <section class="hero year-1996 is-fullheight" id="hero-1996">
         <div class="hero-body description-1996">
             <div class="container has-text-white">
                 <div class="columns is-mobile">
@@ -259,14 +269,14 @@
                     </div>
                     <div class="menu column is-3-mobile">
                         <ul>
-                            <li>1993</li>
+                            <li data-target="hero-1993">1993</li>
                             <li>1995</li>
                             <li class="active-fontsize">1996</li>
-                            <li>1999</li>
+                            <li data-target="hero-1999"> 1999</li>
                             <li>2004</li>
                             <li>2005</li>
                             <li>2006</li>
-                            <li>2007</li>
+                            <li data-target="hero-2007">2007</li>
                             <li>2008</li>
                             <li>2009</li>
                         </ul>
@@ -275,8 +285,8 @@
             </div>
         </div>
     </section>
-    <!-- ============================== SECTION YEAR-1999 ==========================================  -->
-    <section class="hero year-1999 is-fullheight">
+    <!-- ============== SECTION YEAR-1999 ==============  -->
+    <section class="hero year-1999 is-fullheight" id="hero-1999">
         <div class="hero-body description-1999">
             <div class="container has-text-white">
                 <div class="columns is-mobile">
@@ -297,14 +307,14 @@
                     </div>
                     <div class="menu column is-3-mobile">
                         <ul>
-                            <li>1993</li>
+                            <li data-target="hero-1993">1993</li>
                             <li>1995</li>
-                            <li>1996</li>
-                            <li class="active-fontsize">1999</li>
+                            <li data-target="hero-1996">1996</li>
+                            <li class="active-fontsize" data-target="hero-1999">1999</li>
                             <li>2004</li>
                             <li>2005</li>
                             <li>2006</li>
-                            <li>2007</li>
+                            <li data-target="hero-2007">2007</li>
                             <li>2008</li>
                             <li>2009</li>
                         </ul>
@@ -313,7 +323,247 @@
             </div>
         </div>
     </section>
+    <!-- ============== SECTION YEAR-2004-05 ===========  -->
+    <section class="hero year-2004 is-fullheight" id="hero-2004">
+        <div class="hero-body description-2004">
+            <div class="container has-text-white">
+                <div class="columns is-mobile">
+                    <div class="column is-5-desktop is-8-mobile is-two-thirds-tablet">
+                        <p>2004 - 2005</p>
+                        <h1 class="title has-text-white">
+                            Established 2nd manufacturing unit in Silvassa to house
+                            increasing production capacities.
+                        </h1>
+                        <p class="sub-title">
+                            Received Award for ‘BEST EXPORT ORIENTED UINT’
+                            SSI Category – Textile & Textile Product) by Export Promotion Council for EOU &SEZ Units.
+                        </p>
+                    </div>
+                    <div class="menu column is-3-mobile">
+                        <ul>
+                            <li data-target="hero-1993">1993-1995</li>
+                            <li data-target="hero-1996">1996</li>
+                            <li data-target="hero-1999"> 1999</li>
+                            <li class="active-fontsize" data-target="2004">2004-2005</li>
+                            <li>2006</li>
+                            <li data-target="hero-2007">2007-2008</li>
+                            <li>2009-2010</li>
+                            <li data-target="hero-2012">2012-2014</li>
+                            <li>2015</li>
+                            <li>2016</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============== SECTION YEAR-2007-08 ===========  -->
+    <section class="hero year-2007 is-fullheight" id="hero-2007">
+        <div class="hero-body description-2007">
+            <div class="container has-text-white">
+                <div class="columns is-mobile">
+                    <div class="column is-5-desktop is-8-mobile is-two-thirds-tablet">
+                        <p>2007 - 2008</p>
+                        <h1 class="title has-text-white">
 
+                            Shifted focus from commodity
+                            yarns to providing customers with value added products.
+                        </h1>
+                        <p class="sub-title">
+                            SPL introduced a slew of new products in the forthcoming years beginning with covered
+                            yarns.
+                            Amongst the first to produce and market air covered and conventional covered rubber/spandex
+                            yarns from India, today, SPL has one of the largest facilities to manufacture covered yarns
+                            in India.
+                        </p>
+                    </div>
+                    <div class="menu column is-3-mobile">
+                        <ul>
+                            <li data-target="hero-1993">1993-1995</li>
+                            <li data-target="hero-1996">1996</li>
+                            <li data-target="hero-1999">1999</li>
+                            <li>2004-2005</li>
+                            <li>2006</li>
+                            <li class="active-fontsize" data-target="2007">2007-2008</li>
+                            <li>2009-2010</li>
+                            <li data-target="hero-2012">2012-2014</li>
+                            <li>2015</li>
+                            <li>2016</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============== SECTION YEAR-2009-10 ===========  -->
+    <section class="hero year-2009 is-fullheight" id="hero-2009">
+        <div class="hero-body description-2009">
+            <div class="container has-text-white">
+                <div class="columns is-mobile">
+                    <div class="column is-5-desktop is-8-mobile is-two-thirds-tablet">
+                        <p>2009 - 2010 </p>
+                        <h1 class="has-text-white">
+                            Established a marketing subsidiary in Portugal, Sarla Europe LDA to service customer
+                            requirements of the European Region.
+                        </h1>
+                        <p class="has-text-white">
+                            Moving forward with the focus of better servicing the requirements of our International
+                            customers, In October 2010 SARLA set up manufacturing operations in Turkey, a textile
+                            hub located at the gateway to Europe thereby effectively catering to both the Turkish &
+                            European Markets.
+                        </p>
+                    </div>
+                    <div class="menu column is-3-mobile">
+                        <ul>
+                            <li data-target="hero-1993">1993-1995</li>
+                            <li data-target="hero-1996">1996</li>
+                            <li data-target="hero-1999">1999</li>
+                            <li>2004-2005</li>
+                            <li>2006</li>
+                            <li data-target="hero-2007">2007-2008</li>
+                            <li class="active-fontsize">2009-2010</li>
+                            <li data-target="hero-2012">2012-2014</li>
+                            <li>2015</li>
+                            <li>2016</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============== SECTION YEAR-2012-14 ===========  -->
+    <section class="hero year-2012 is-fullheight" id="hero-2012">
+        <div class="hero-body description-2009">
+            <div class="container has-text-white">
+                <div class="columns is-mobile">
+                    <div class="column is-5-desktop is-8-mobile is-two-thirds-tablet">
+                        <p>2012 - 2014</p>
+                        <h1 class="title has-text-white">
+
+                            Business Excellence Awards hosted in New Delhi.
+                        </h1>
+                        <p class="sub-title">
+                            In recognition of the stringent quality management systems which the company has put in
+                            place over the years,
+                            SARLA has received the distinction of being an ISO 9001: 2008 certified company on June 3rd
+                            2014.
+                        </p>
+                    </div>
+                    <div class="menu column is-3-mobile">
+                        <ul>
+                            <li data-target="hero-1993">1993-1995</li>
+                            <li data-target="hero-1996">1996</li>
+                            <li data-target="hero-1999">1999</li>
+                            <li>2004-2005</li>
+                            <li>2006</li>
+                            <li data-target="hero-2007">2007-2008</li>
+                            <li>2009-2010</li>
+                            <li class="active-fontsize" data-target="hero-2012">2012-2014</li>
+                            <li>2015</li>
+                            <li>2016</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============== FOOTER ============= -->
+    <footer>
+        <div class="columns is-1">
+            <div class="column is-half">
+                <div class="columns is-mobile">
+                    <div class="column office-details ">
+
+                        <div class="corporate-office ">
+                            <h4>corporate office</h4>
+                            <address>
+                                <ul>
+                                    <li>304,ARCADIA,</li>
+                                    <li>195, NARIMAN POINT,</li>
+                                    <li>MUMBAI 400 021</li>
+                                </ul>
+                            </address>
+                            <div class="phone-no ">
+                                <ul>
+                                    <li>+91 22 2283 4116 </li>
+                                    <li>+91 22 4032 2786</li>
+                                    <li>neha@sarlafibers.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="compliance-officer ">
+                            <h4>compliance officer</h4>
+                            <address>
+                                <ul>
+                                    <li>Mahendra Seth</li>
+                                    <li>304, Arcadia</li>
+                                    <li>195, Nariman Point</li>
+                                    <li>Mumbai - 400 021</li>
+                                </ul>
+                            </address>
+                        </div>
+
+                    </div>
+                    <div class="column quick-links ">
+                        <ul>
+                            <li> Quick link 1</li>
+                            <li>A longer Quick link optoin 2</li>
+                            <li>Quick link 3</li>
+                            <li>Anotherr Quick link optoin 2</li>
+                        </ul>
+                        <ul>
+                            <li>Quick link 1</li>
+                            <li>Quick link 2</li>
+                            <li>Quick link 3</li>
+                            <li>Quick link 4</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-half">
+                <div class="columns">
+                    <div class="column is-3 is-hidden-mobile"></div>
+                    <div class="column">
+                        <form class="contact-form">
+                            <h3 class="fz-12">Connect with us</h3>
+                            <div class="name inp ht-35 mb-24 fz-10">
+                                <label for="name">
+                                    <input type="text" name="name" id="name" value="Isha Jhunjhunwala" required>
+                                    <span class="form-label">name</span>
+                                </label>
+                            </div>
+                            <div class="email inp ht-35 mb-24 fz-10 ">
+                                <label for="email ">
+                                    <input type="email " name="email " id="email " required>
+                                    <span class="form-label ">email</span>
+                                </label>
+
+                            </div>
+                            <div class="phone inp ht-35 fz-10 mb-24 ">
+                                <label for="phone ">
+                                    <input type="number " name="phone " id="phone " required>
+                                    <span class="form-label ">phone</span>
+                                </label>
+                            </div>
+                            <div class="msg inp-textarea ht-101 ">
+                                <textarea class="wd-325 ht-101 fz-10 " name="msg " id="msg " cols="30 " rows="5 "
+                                    placeholder="Write your message here... "></textarea>
+                            </div>
+                            <span class="footer-submit-btn btn-white mt-11 ">
+                                <a href="#fixme ">submit</a>
+                            </span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        </div>
+        <div class="copyright ">
+            <p>&copy; 2018 Sarla Performance Fabrics Limited. All rights reserved</p>
+        </div>
+    </footer>
 </body>
 
 </html>
