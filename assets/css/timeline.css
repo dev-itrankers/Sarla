@@ -16,13 +16,13 @@
 #timeline .menu{
 height: 250px;
 font-family: Rubik;
-font-size: 1rem;
+font-size: 1em;
 font-weight: 500;
 line-height: 3.13;
 text-align: right;
 }
 #timeline .active-fontsize{
-  font-size: 1.7rem;
+  font-size: 1.7em;
   line-height: 1.67;
 }
 /*================================== YEARS ================================= */
@@ -32,13 +32,7 @@ text-align: right;
 #timeline .description-years{
  height: 145px;
 }
-#timeline .years h1{
-  font-weight: normal;
-  width: 676px;     
-  height: 40px;
-  font-family: Rubik;
-  font-size: 4em;
-}
+
 #timeline .years p{
   margin-bottom: 0.5rem;
   font-family: Rubik;
@@ -46,14 +40,14 @@ text-align: right;
   line-height: 1.2;
   word-spacing: 0.1rem;
 }
-.year-1993 h1, .year-1995 h1,
-.year-1996 h1, .year-1999 h1{
-  width: 466px;
+#timeline .hero-body h1{
+  max-width: 466px;
+  min-width: 300px;
   font-family: Rubik;
   font-size: 3em;
   line-height: 1.17;
   font-weight: normal;
-  margin-bottom: 0.5rem  !important;
+  margin-bottom: 0.5em  !important;
 }
 
 /*================================== YEARS-1993 ================================= */
@@ -137,23 +131,30 @@ text-align: right;
 } */
  
 /*=================================== MEDIA QUERIES =================================*/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   #timeline  .hero {
     background-size: auto;
     /* background-position: left; */
   }
-  #timeline .years h1 , #timeline .year-1999 h1{
-    font-size: 2em;
+  #timeline .hero-body h1{
+    font-size: 2.5em;
   }
   #timeline .years p{
     font-size: 1.3em;
   }
-}
-@media screen and (max-width: 768px){
-  #timeline .years h1 {
-    font-size: 3em;
+  #timeline .active-fontsize{
+    font-size: 1.4em;
+    line-height: 1.67;
   }
   #timeline .years p #timeline .year-1999 p{
   font-size: 1.3em;
   }
+}
+
+body{
+  scroll-snap-type: y mandatory;
+}
+
+section{
+  scroll-snap-align: start;
 }
