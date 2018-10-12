@@ -369,7 +369,7 @@ footer {
 
 .footer {
   padding: 0;
-  margin-top: -20;
+  margin-top: -20px;
 }
 
 /* ===================================footer-left========================== */
@@ -379,28 +379,21 @@ address {
 ul {
   list-style-type: none;
 }
-.office-wrapper,
-.footer,
-.footer-left {
-  display: flex;
-  justify-content: space-between;
-  background-color: #f6f6f6;
-}
 .office-wrapper {
   margin-bottom: 58px;
 }
 .corporate-office {
   height: 155px;
-  width: 175px;
+  /* width: 175px; */
 }
 .office-details h4 {
   text-transform: uppercase;
 }
-.footer-left {
+/* .footer-left { */
   /* padding: 52px 0 84px 111px; */
-  font-size: 10px;
-  height: 330px;
-}
+  /* font-size: 10px; */
+  /* height: 330px; */
+/* } */
 .corporate-office > h4,
 .corporate-office p,
 .compliance-officer > h4 {
@@ -413,7 +406,7 @@ ul {
 }
 .compliance-officer {
   height: 96px;
-  width: 175px;
+  /* width: 175px; */
   margin-top: 7px;
 }
 .phone-no {
@@ -425,8 +418,8 @@ ul {
 }
 .quick-links {
   height: 155px;
-  width: 175px;
-  margin-left: 81px;
+  /* width: 175px; */
+  /* margin-left: 81px; */
 }
 .quick-links > ul:first-child {
   margin-bottom: 20px;
@@ -591,11 +584,11 @@ ul {
     padding: 0 !important;
   }
   .footer-left {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
   }
   .quick-links {
-    margin-left: -10px;
+    /* margin-left: -10px; */
   }
   .wd-325 {
     width: 80vw !important;
