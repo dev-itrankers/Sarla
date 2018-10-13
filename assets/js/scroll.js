@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// ==========================nav scroll======================
 document.body.onscroll = function() {
   var y = document.body.getBoundingClientRect().y;
-  console.log(y);
   if (y < 30) {
     document.querySelector("html").classList.add("navbar-pt");
     document.querySelector(".navbar-brand").classList.add("navbar-mh");

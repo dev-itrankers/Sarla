@@ -91,6 +91,8 @@ function changeSelectedProduct(e) {
     // current.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 }
+
+// ==========================nav scroll======================
 document.body.onscroll = function() {
   var y = document.body.getBoundingClientRect().y;
   if (y < 30) {
@@ -118,6 +120,7 @@ document.body.onscroll = function() {
       .classList.remove("navbar-burger-h");
   }
 };
+// =========================product scroll========================
 var scroll = document.querySelector(".scroll-bar"),
   detSlide = document.querySelectorAll(".det-none"),
   prodGradient = document.querySelector(".prod-details");

@@ -127,7 +127,7 @@ a:hover {
 }
 /* ==============================slider css================================  */
 .carousel-item {
-  background-color: skyblue;
+  background-color: #f94650;
 }
 .slider,
 .title,
@@ -189,15 +189,18 @@ a:hover {
 }
 .slider-third {
   background-image: url(../images/Home/slider3.JPG);
+  background-position: center center;
 }
 .slider-fourth {
   background-image: url(../images/Home/slider4.jpg);
+  background-position: center center;
 }
 .slider-fourth .subtitle {
   width: 33%;
 }
 .slider-fifth {
   background-image: url(../images/Home/slider5.jpg);
+  background-position: center center;
 }
 .slider-fifth .title {
   line-height: 1;
@@ -265,7 +268,7 @@ Product-range-section .is-4 {
   line-height: 1em;
 }
 .Product-range-section .img {
-  background-image: url("../images/prod-range.jpg");
+  background-image: url("../images/product-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
