@@ -2,6 +2,135 @@
 * {
   font-size: 10px;
 }
+ /* ============ NAVBAR STYLES ================= */
+a:hover {
+  color: #363636 !important;
+}
+
+.navbar ul {
+  display: flex;
+  align-content: space-between;
+  font-family: Rubik-Regular;
+  font-size: 1em;
+}
+.stoke > ul > li:first-child {
+  margin-right: 2em;
+}
+.nav-padding {
+  padding: 0 0.8rem !important;
+}
+.link {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+}
+.green {
+  color: #3f893b;
+}
+.red {
+  color: #fb0c06;
+}
+.fw-400 {
+  font-weight: 400 !important;
+}
+.border {
+  border-bottom: 0.1rem solid #e9e9e9;
+}
+.navbar-link::after {
+  border-color: black;
+  margin-top: -0.6em;
+  font-size: 1.2em;
+}
+.navbar-dropdown-onscroll {
+  margin-top: -0.6em;
+  border-top: none;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+.dropdown-nav-item {
+  font-size: 1em !important;
+}
+.navbar-dropdown a.navbar-item:hover {
+  background-color: white;
+  color: #afca0b !important;
+}
+.navbar-dropdown {
+  /* left: 50% !important;
+  right: auto;
+  text-align: center;
+  transform: translateX(-50%); */
+}
+.navbar-dropdown a {
+  font-size: 0.8em;
+}
+/* 
+.navbar-dropdown-close {
+  left: 0;
+  text-align: start;
+} */
+
+.navbar-item:hover,
+.navbar-item.has-dropdown:hover span {
+  color: black !important;
+  font-weight: 500 !important;
+  box-sizing: border-box;
+}
+.navbar-item:hover .navbar-link span::after {
+  opacity: 0;
+}
+
+.nav-active {
+  border-bottom: 3px solid #3f893b;
+}
+/* ====================scroll change height=================== */
+.navbar {
+  transition: all 250ms ease-in;
+}
+.navbar-mh {
+  min-height: 2.25rem;
+}
+
+.navbar-pt {
+  padding-top: 2.25rem;
+}
+
+.navbar-item-p {
+  padding: 0 0.75rem;
+}
+
+.navbar-burger-h {
+  height: 2.25rem;
+}
+/* Pranjali navbar contact scroll*/
+
+.nav-active {
+  border-bottom: 3px solid #3f893b;
+}
+@keyframes sfade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.footer-submit-btn {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-submit-btn a {
+  color: black;
+}
+
+.inp-textarea > textarea {
+  background-color: transparent;
+  resize: none;
+}
+/*================== YEARS STYLES ================== */
+#timeline li{
+  cursor:pointer;
+}
 #timeline .hero{
   width: 100%;
   height: 590px;
@@ -9,10 +138,6 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-.navbar-end strong{
-  margin-left: 0.2rem;
-}
-/*================================== YEARS STYLES ================================= */
 #timeline .menu{
 height: 250px;
 font-family: Rubik;
@@ -21,24 +146,20 @@ font-weight: 500;
 line-height: 3.13;
 text-align: right;
 }
+#timeline .menu ul{
+  margin-top: -6em;
+}
 #timeline .active-fontsize{
-  font-size: 1.7em;
+  font-size: 2em;
   line-height: 1.67;
 }
-/*================================== YEARS ================================= */
-#timeline .years{
-  background-image: url("../images/Timeline-Page/14.png");
-}
-#timeline .description-years{
- height: 145px;
-}
-
-#timeline .years p{
-  margin-bottom: 0.5rem;
+/*================= YEARS-SECTION =============== */
+#timeline .hero-body p{
+  margin-bottom: 0.5em;
   font-family: Rubik;
-  font-size: 1.5em;
+  font-size: 1.3em;
   line-height: 1.2;
-  word-spacing: 0.1rem;
+  word-spacing: 0.1em;
 }
 #timeline .hero-body h1{
   max-width: 466px;
@@ -49,112 +170,350 @@ text-align: right;
   font-weight: normal;
   margin-bottom: 0.5em  !important;
 }
-
-/*================================== YEARS-1993 ================================= */
+#timeline .years-font{
+  font-size: 1.5em;
+}
+#timeline .years{
+  background-image: url("../images/Timeline-Page/years.png");
+}
+#timeline .years h1{
+  font-size: 4em;
+}
+#timeline .years p{
+  font-size: 1.5em;
+}
 #timeline .year-1993{
-  background-color: #223085;
- /* background-image: url("/images/Timeline-Page/12.png");*/
+  background-image: url("../images/Timeline-Page/1993-95.png");
 }
-#timeline .description-1993{
- height: 87px;
-}
-#timeline .year-1993 p{
-  font-family: Rubik;
-  font-size: 1.3em;
-  font-weight: normal;
-  line-height: 1.42;
-}
-
-/*================================== YEARS-1995 ================================= */
 #timeline .year-1995{  
-  background-image: url("../images/Timeline-Page/4.png");
-}
-#timeline .description-1995{
-  height: 101px;
-}
-#timeline .description-1995 p{
-  font-family: Rubik;
-  font-size: 1.2em;
-  line-height: 1.42;
+  background-image: url("../images/Timeline-Page/1995.png");
 }
 #timeline .description-1995 span{
   display: flex;
 }
-
-/*================================== YEARS-1996 ================================= */
 #timeline .year-1996{
-  background-image: url("../images/Timeline-Page/8.png");
+  background-image: url("../images/Timeline-Page/1996.png");
 }
-#timeline .description-1996{
-  height: 92px;
-}
-/*================================== YEARS-1999 ================================= */
 #timeline .year-1999{ 
-  background-image: url("../images/Timeline-Page/17.png");
+  background-image: url("../images/Timeline-Page/1999.png");
 }
-#timeline .description-1999 .column p{
-  font-family: Rubik;
-  font-size: 1.2em;
-  line-height: 1.42;
-  max-width: 320px;
-  word-spacing: 0.1rem;
+#timeline .year-2004{ 
+  background-image: url("../images/Timeline-Page/2004-05.png");
 }
- /*================================== TIMELINE ================================= 
-.timeline-ul{
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	height:100vh;
+#timeline .year-2007{ 
+  background-image: url("../images/Timeline-Page/2007-08.png");
 }
-.timeline-circle-before{
- 	if you dont want the above line display none 
-	display: block;
-	width: 2px;
-	height: 50%;
-	background-color: #fff;
+#timeline .year-2009{ 
+  background-image: url("../images/Timeline-Page/2009-2010.png");
 }
-.timeline-circle-after{
-	 	if you dont want the bottom line display none 
-	display: block;
-	width: 2px;
-	height: 50%;
-	background-color: #fff;
+#timeline .year-2012{ 
+  background-image: url("../images/Timeline-Page/2013-14.png");
 }
 
-.timeline-circle {
-	list-style-type: none;
-	height: 10px;
-	width: 10px;
-	background-color: #fff;
-	border-radius:100%;
-} */
+/* ============ connect with us footer ============= */
+.contact-form > h3 {
+  font-size: 0.8rem;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #00879e;
+  font-weight: 500;
+}
+.inp .form-label {
+  top: 1.5rem;
+  text-transform: capitalize;
+  font-size: 0.6rem;
+  color: #616161;
+  margin-bottom: 1rem;
+  position: absolute;
+  transition: all 0.1s ease-in;
+}
+.inp label {
+  width: 100%;
+  display: block;
+  position: relative;
+  font-size: 1.5rem;
+}
+.inp input {
+  width: 100%;
+  position: absolute;
+  top: 1.5rem;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #979797;
+  padding-bottom: 9px;
+}
+.inp input:focus + span,
+.inp input:valid + span {
+  top: 0.3rem;
+  font-size: 0.6rem;
+}
+.inp-textarea > textarea {
+  border-color: #979797;
+  padding: 0.9rem 0 0 1rem;
+  font-size: 1rem;
+}
+/* ====================footer====================== */
+
+.corporate-office h4 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+footer {
+  height: 466px;
+  padding: 52px 111px;
+  background-color: #f6f6f6;
+}
+
+.footer {
+  padding: 0;
+  margin-top: -20px;
+}
+
+/* ===================================footer-left========================== */
+address {
+  font-style: normal;
+}
+ul {
+  list-style-type: none;
+}
+.office-wrapper {
+  margin-bottom: 58px;
+}
+.corporate-office {
+  height: 155px;
+  /* width: 175px; */
+}
+.office-details h4 {
+  text-transform: uppercase;
+}
+/* .footer-left { */
+/* padding: 52px 0 84px 111px; */
+/* font-size: 10px; */
+/* height: 330px; */
+/* } */
+.corporate-office > h4,
+.corporate-office p,
+.compliance-officer > h4 {
+  margin-bottom: 12px;
+}
+.corporate-office,
+.compliance-officer,
+.quick-links {
+  line-height: 15px;
+}
+.compliance-officer {
+  height: 96px;
+  /* width: 175px; */
+  margin-top: 7px;
+}
+.phone-no {
+  margin-top: 18px;
+}
+.phone-no > ul > li:last-child {
+  border-bottom: 1px solid black;
+  display: inline;
+}
+.quick-links {
+  height: 155px;
+  /* width: 175px; */
+  /* margin-left: 81px; */
+}
+.quick-links > ul:first-child {
+  margin-bottom: 20px;
+}
+.copyright {
+  /* margin-bottom: 85px; */
+  margin-top: -3%;
+  font-size: 8px;
+}
+
+/* ====================footer right form=================== */
+.ht-35 {
+  height: 20px;
+}
+.wd-325 {
+  width: 100%;
+}
+.ht-101 {
+  height: 101px;
+}
+.ht-330 {
+  height: 330px;
+}
+.mb-24 {
+  margin-bottom: 24px;
+}
+.mb-29 {
+  margin-bottom: 29px;
+}
+.mt-11px {
+  margin-top: 11px;
+}
+.fz-10 {
+  font-size: 10px;
+}
+.msg {
+  margin-top: 3rem;
+}
+.footer-right .contact-form > h3 {
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #1d1d1d;
+}
+.footer-right {
+  /* padding: 50px 111px 85px 79px; */
+  height: 330px;
+}
+.footer-submit-btn {
+  width: 130px;
+  height: 40px;
+  padding: 10px 36px;
+  display: block;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin-top: 42px;
+  font-size: 15px;
+  border: 1px solid black;
+}
+.footer-right label > span {
+  font-size: 12px;
+}
+.footer-right textarea {
+  margin: 29px 0 0 0;
+}
+.footer-right .inp input {
+  color: #1d1d1d;
+}
+/* ====================scroll change height=================== */
+.navbar {
+  transition: all 250ms ease-in;
+}
+.navbar-mh {
+  min-height: 2.25rem;
+}
+
+.navbar-pt {
+  padding-top: 2.25rem;
+}
+
+.navbar-item-p {
+  padding: 0 0.75rem;
+}
+
+.navbar-burger-h {
+  height: 2.25rem;
+}
+/* Pranjali navbar contact scroll*/
+
+.nav-active {
+  border-bottom: 3px solid #3f893b;
+}
+@keyframes sfade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.footer-submit-btn {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-submit-btn a {
+  color: black;
+}
+
+.inp-textarea > textarea {
+  background-color: transparent;
+  resize: none;
+}
+
  
 /*=================================== MEDIA QUERIES =================================*/
 @media screen and (max-width: 768px) {
   #timeline  .hero {
-    background-size: auto;
-    /* background-position: left; */
+   background-size: cover;
   }
   #timeline .hero-body h1{
+    font-size: 2em;
+  }
+ #timeline .years h1{
     font-size: 2.5em;
   }
-  #timeline .years p{
-    font-size: 1.3em;
+ footer {
+    height: auto;
+    padding: 10% 15%;
   }
-  #timeline .active-fontsize{
-    font-size: 1.4em;
-    line-height: 1.67;
+  .footer {
+    display: block;
   }
-  #timeline .years p #timeline .year-1999 p{
-  font-size: 1.3em;
+  .copyright {
+    padding-top: 30px;
   }
 }
 
-body{
+@media screen and (max-width: 480px) {
+#timeline  .hero {
+  width: min-content;
+  background-size: cover;
+}
+#timeline .hero-body h1{
+  font-size: 2em;
+}
+#timeline .hero-body p{
+  font-size: 1.2em;
+}
+#timeline .years h1{
+  font-size: 2.2em;
+}
+#timeline .menu{
+  font-size: 0.5em;
+}
+#timeline .active-fontsize{
+  font-size: 1.5em;
+}
+footer {
+  padding: 10% 10%;
+  height: 100%;
+}
+.footer {
+  display: block;
+  padding: 0 !important;
+}
+.contact-form {
+  margin-top: 30px !important;
+}
+.submit-btn {
+  margin-top: 20px;
+}
+.wd-325 {
+  width: 100% !important;
+}
+.contact-form {
+  margin: 0 0rem 0 0rem;
+}
+.copyright {
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.footer-submit-btn {
+  font-size: 0.85rem;
+  width: 110px;
+  height: 40px;
+}
+}
+
+/* body{
   scroll-snap-type: y mandatory;
 }
 
 section{
   scroll-snap-align: start;
-}
+} */
