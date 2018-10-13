@@ -6,6 +6,7 @@
 a:hover {
   color: #363636 !important;
 }
+
 .navbar ul {
   display: flex;
   align-content: space-between;
@@ -58,7 +59,6 @@ a:hover {
   text-align: center;
   transform: translateX(-50%); */
 }
-
 .navbar-dropdown a {
   font-size: 0.8em;
 }
@@ -128,6 +128,9 @@ a:hover {
   resize: none;
 }
 /*================================== YEARS STYLES ================================= */
+#timeline li{
+  cursor:pointer;
+}
 #timeline .hero{
   width: 100%;
   height: 590px;
@@ -237,6 +240,8 @@ text-align: right;
   background-image: url("../images/Timeline-Page/2013-14.png");
 }
 /* ============ connect with us footer ============= */
+
+/* ====================connect with us============= */
 .contact-form {
   /* margin: 0 17.9rem 0 8.6rem; */
 }
@@ -290,6 +295,7 @@ text-align: right;
 }
 
 footer {
+  height: 466px;
   padding: 52px 111px;
   background-color: #f6f6f6;
 }
@@ -415,42 +421,58 @@ ul {
 .footer-right .inp input {
   color: #1d1d1d;
 }
- /*================================== TIMELINE ================================= 
-.timeline-ul{
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	height:100vh;
+/* ====================scroll change height=================== */
+.navbar {
+  transition: all 250ms ease-in;
 }
-.timeline-circle-before{
- 	if you dont want the above line display none 
-	display: block;
-	width: 2px;
-	height: 50%;
-	background-color: #fff;
-}
-.timeline-circle-after{
-	 	if you dont want the bottom line display none 
-	display: block;
-	width: 2px;
-	height: 50%;
-	background-color: #fff;
+.navbar-mh {
+  min-height: 2.25rem;
 }
 
-.timeline-circle {
-	list-style-type: none;
-	height: 10px;
-	width: 10px;
-	background-color: #fff;
-	border-radius:100%;
-} */
+.navbar-pt {
+  padding-top: 2.25rem;
+}
+
+.navbar-item-p {
+  padding: 0 0.75rem;
+}
+
+.navbar-burger-h {
+  height: 2.25rem;
+}
+/* Pranjali navbar contact scroll*/
+
+.nav-active {
+  border-bottom: 3px solid #3f893b;
+}
+@keyframes sfade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.footer-submit-btn {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-submit-btn a {
+  color: black;
+}
+
+.inp-textarea > textarea {
+  background-color: transparent;
+  resize: none;
+}
+
  
 /*=================================== MEDIA QUERIES =================================*/
 @media screen and (max-width: 768px) {
   #timeline  .hero {
-    background-size: auto;
-    /* background-position: left; */
+   
   }
   #timeline .hero-body h1{
     font-size: 2.5em;
@@ -471,12 +493,55 @@ ul {
    #timeline .year-1993{
     background-size: cover;
   } 
+  footer {
+    height: auto;
+    padding: 10% 15%;
+  }
+  .footer {
+    display: block;
+  }
+  .copyright {
+    padding-top: 30px;
+  }
 }
 
-body{
+@media screen and (max-width: 480px) {
+footer {
+  padding: 10% 10%;
+  height: 100%;
+}
+.footer {
+  display: block;
+  padding: 0 !important;
+}
+.contact-form {
+  margin-top: 30px !important;
+}
+.submit-btn {
+  margin-top: 20px;
+}
+.wd-325 {
+  width: 100% !important;
+}
+.contact-form {
+  margin: 0 0rem 0 0rem;
+}
+.copyright {
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+.footer-submit-btn {
+  font-size: 0.85rem;
+  width: 110px;
+  height: 40px;
+}
+}
+
+/* body{
   scroll-snap-type: y mandatory;
 }
 
 section{
   scroll-snap-align: start;
-}
+} */
