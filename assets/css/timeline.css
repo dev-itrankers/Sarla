@@ -2,7 +2,7 @@
 * {
   font-size: 10px;
 }
-/* ======================== NAVBAR STYLES ================= */
+ /* ============ NAVBAR STYLES ================= */
 a:hover {
   color: #363636 !important;
 }
@@ -127,7 +127,7 @@ a:hover {
   background-color: transparent;
   resize: none;
 }
-/*================================== YEARS STYLES ================================= */
+/*================== YEARS STYLES ================== */
 #timeline li{
   cursor:pointer;
 }
@@ -472,7 +472,7 @@ ul {
 /*=================================== MEDIA QUERIES =================================*/
 @media screen and (max-width: 768px) {
   #timeline  .hero {
-   
+   width: fit-content;
   }
   #timeline .hero-body h1{
     font-size: 2.5em;
@@ -506,6 +506,9 @@ ul {
 }
 
 @media screen and (max-width: 480px) {
+  #timeline  .hero {
+    width: fit-content;
+   }
 footer {
   padding: 10% 10%;
   height: 100%;
