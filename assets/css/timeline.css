@@ -146,22 +146,18 @@ font-weight: 500;
 line-height: 3.13;
 text-align: right;
 }
+#timeline .menu ul{
+  margin-top: -6em;
+}
 #timeline .active-fontsize{
-  font-size: 1.7em;
+  font-size: 2em;
   line-height: 1.67;
 }
-/*================= YEARS =============== */
-#timeline .years{
-  background-image: url("../images/Timeline-Page/years.png");
-}
-#timeline .description-years{
- height: 145px;
-}
-
-#timeline .years p{
+/*================= YEARS-SECTION =============== */
+#timeline .hero-body p{
   margin-bottom: 0.5em;
   font-family: Rubik;
-  font-size: 1.5em;
+  font-size: 1.3em;
   line-height: 1.2;
   word-spacing: 0.1em;
 }
@@ -169,82 +165,52 @@ text-align: right;
   max-width: 466px;
   min-width: 300px;
   font-family: Rubik;
-  font-size: 4em;
+  font-size: 3em;
   line-height: 1.17;
   font-weight: normal;
   margin-bottom: 0.5em  !important;
 }
-
-/*================ YEARS-1993-95 ================= */
+#timeline .years-font{
+  font-size: 1.5em;
+}
+#timeline .years{
+  background-image: url("../images/Timeline-Page/years.png");
+}
+#timeline .years h1{
+  font-size: 4em;
+}
+#timeline .years p{
+  font-size: 1.5em;
+}
 #timeline .year-1993{
   background-image: url("../images/Timeline-Page/1993-95.png");
 }
-
-#timeline .year-1993 p{
-  font-family: Rubik;
-  font-size: 1.3em;
-  font-weight: normal;
-  line-height: 1.42;
-}
-
-/*=============== YEARS-1995 ============== */
 #timeline .year-1995{  
   background-image: url("../images/Timeline-Page/1995.png");
-}
-#timeline .description-1995{
-  height: 101px;
-}
-#timeline .description-1995 p{
-  font-family: Rubik;
-  font-size: 1.2em;
-  line-height: 1.42;
 }
 #timeline .description-1995 span{
   display: flex;
 }
-
-/*============= YEARS-1996 ================ */
 #timeline .year-1996{
   background-image: url("../images/Timeline-Page/1996.png");
 }
-#timeline .description-1996{
-  height: 92px;
-}
-/*============= YEARS-1999 ================ */
 #timeline .year-1999{ 
   background-image: url("../images/Timeline-Page/1999.png");
 }
-#timeline .description-1999 .column p{
-  font-family: Rubik;
-  font-size: 1.2em;
-  line-height: 1.42;
-  max-width: 320px;
-  word-spacing: 0.1rem;
-}
-/*================ YEARS-2004-05 ============ */
 #timeline .year-2004{ 
   background-image: url("../images/Timeline-Page/2004-05.png");
 }
-
-/*================ YEARS-2007 =========== */
 #timeline .year-2007{ 
   background-image: url("../images/Timeline-Page/2007-08.png");
 }
-
-/*================ YEARS-2009-10 =========== */
 #timeline .year-2009{ 
   background-image: url("../images/Timeline-Page/2009-2010.png");
 }
-/*================ YEARS-2013-14 =========== */
 #timeline .year-2012{ 
   background-image: url("../images/Timeline-Page/2013-14.png");
 }
-/* ============ connect with us footer ============= */
 
-/* ====================connect with us============= */
-.contact-form {
-  /* margin: 0 17.9rem 0 8.6rem; */
-}
+/* ============ connect with us footer ============= */
 .contact-form > h3 {
   font-size: 0.8rem;
   line-height: 1;
@@ -472,28 +438,15 @@ ul {
 /*=================================== MEDIA QUERIES =================================*/
 @media screen and (max-width: 768px) {
   #timeline  .hero {
-   width: fit-content;
+   background-size: cover;
   }
   #timeline .hero-body h1{
+    font-size: 2em;
+  }
+ #timeline .years h1{
     font-size: 2.5em;
   }
-  #timeline .years p{
-    font-size: 1.3em;
-  }
-  #timeline .active-fontsize{
-    font-size: 1.4em;
-    line-height: 1.67;
-  }
-  #timeline .years p #timeline .year-1999 p{
-  font-size: 1.3em;
-  }
-  #timeline .year-1996{
-    background-size: cover;
-  }
-   #timeline .year-1993{
-    background-size: cover;
-  } 
-  footer {
+ footer {
     height: auto;
     padding: 10% 15%;
   }
@@ -506,9 +459,25 @@ ul {
 }
 
 @media screen and (max-width: 480px) {
-  #timeline  .hero {
-    width: fit-content;
-   }
+#timeline  .hero {
+  width: min-content;
+  background-size: cover;
+}
+#timeline .hero-body h1{
+  font-size: 2em;
+}
+#timeline .hero-body p{
+  font-size: 1.2em;
+}
+#timeline .years h1{
+  font-size: 2.2em;
+}
+#timeline .menu{
+  font-size: 0.5em;
+}
+#timeline .active-fontsize{
+  font-size: 1.5em;
+}
 footer {
   padding: 10% 10%;
   height: 100%;
