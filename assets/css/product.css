@@ -495,6 +495,7 @@ ul {
 .navbar {
   transition: all 250ms ease-in;
 }
+
 .navbar-mh {
   min-height: 2.25rem;
 }
@@ -515,6 +516,9 @@ ul {
 .nav-active {
   border-bottom: 3px solid #3f893b;
 }
+
+/* ----------------------------------------------------------------- */
+
 @keyframes sfade {
   0% {
     opacity: 0;
