@@ -43,3 +43,56 @@ document.body.onscroll = function() {
       .classList.remove("navbar-burger-h");
   }
 };
+// ======================scroll nav contact global==========================
+var scrollTarget = {
+  "connect-with-us": document.querySelector(".connect-with-us"),
+  map: document.querySelector("section.map")
+};
+document
+  .querySelectorAll("a")
+  .forEach(a => a.addEventListener("click", prevent));
+
+function prevent(e) {
+  e.preventDefault();
+}
+
+function scrollInView(e) {
+  console.log(e);
+  var target = e.target.getAttribute("target");
+  if (!target) target = e.target.parentElement.getAttribute("target");
+  scrollTarget[target].scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+}
+document.querySelectorAll(".scroll-nav").forEach(a =>
+  a.addEventListener("click", function() {
+    a.classList.add("nav-active");
+  })
+);
+
+// var a = document.querySelector(".deactive>a");
+
+// document.querySelector(".scroll").addEventListener("click", function() {
+//   a.classList.remove("deactive");
+//   a.classList.add("active");
+// });
+document
+  .querySelectorAll(".scroll-nav")
+  .forEach(a => a.addEventListener("click", scrollInView));
+
+window.addEventListener("scroll", function(e) {
+  var connectTop = scrollTarget["connect-with-us"].getBoundingClientRect().top;
+  console.log(connectTop, window.innerHeight / 2);
+  if (connectTop < window.innerHeight / 2 && connectTop > -90) {
+    document.querySelector(".contact-us").classList.add("nav-active");
+  } else {
+    document.querySelector(".contact-us").classList.remove("nav-active");
+  }
+  var globalTop = scrollTarget["map"].getBoundingClientRect().top;
+  if (globalTop < window.innerHeight / 2 && globalTop > -70) {
+    document.querySelector(".global").classList.add("nav-active");
+  } else {
+    document.querySelector(".global").classList.remove("nav-active");
+  }
+});

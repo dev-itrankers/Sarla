@@ -107,6 +107,9 @@ a:hover {
 .nav-active {
   border-bottom: 3px solid #3f893b;
 }
+/* .active {
+  border-bottom: 3px solid #3f893b;
+} */
 /* ==============================explore button================================  */
 .explore-btn {
   width: 150px;
