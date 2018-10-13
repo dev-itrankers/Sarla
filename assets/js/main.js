@@ -31,14 +31,15 @@ window.addEventListener("keydown", function(e) {
 });
 window.addEventListener("keyup", changeSelectedProduct);
 
-document
-  .querySelector(".prod-list-ul li:first-child")
-  .addEventListener("click", function() {
-    changeSelectedProduct({ keyCode: 38 });
-  });
+var firstProd = document.querySelector(".prod-item");
+var prod_item_height = firstProd.getBoundingClientRect().height;
+var first_prod_margin_top = 0;
+document.querySelector(".prod-up-arrow").addEventListener("click", function() {
+  changeSelectedProduct({ keyCode: 38 });
+});
 
 document
-  .querySelector(".prod-list-ul li:last-child")
+  .querySelector(".prod-down-arrow")
   .addEventListener("click", function() {
     changeSelectedProduct({ keyCode: 40 });
   });
@@ -48,6 +49,8 @@ function changeSelectedProduct(e) {
   if (key === 40) {
     var temp = current && current.nextElementSibling;
     if (!temp.classList.contains("prod-item")) return;
+    first_prod_margin_top -= prod_item_height;
+    firstProd.style.marginTop = first_prod_margin_top + "px";
     if (temp.classList.contains("prod-item")) {
       current.classList.remove("active");
       current.classList.add("deactive");
@@ -58,10 +61,10 @@ function changeSelectedProduct(e) {
       current.classList.remove("deactive");
       scroll.classList.contains("active") && current.classList.add("smallfont");
       document.querySelector(
-        ".prod-list-ul li:first-child"
+        ".prod-up-arrow"
       ).innerHTML = `<i class="far fa-arrow-alt-circle-up"></i>`;
       document.querySelector(
-        ".prod-list-ul li:last-child"
+        ".prod-down-arrow"
       ).innerHTML = `<i class="fas fa-arrow-alt-circle-down"></i>`;
       // current.scrollIntoView({ behavior: "smooth", block: "center" });
     }
@@ -69,6 +72,8 @@ function changeSelectedProduct(e) {
   if (key === 38) {
     var temp = current && current.previousElementSibling;
     if (!temp.classList.contains("prod-item")) return;
+    first_prod_margin_top += prod_item_height;
+    firstProd.style.marginTop = first_prod_margin_top + "px";
     current.classList.remove("active");
     current.classList.add("deactive");
     current.classList.contains("smallfont") &&
@@ -78,17 +83,16 @@ function changeSelectedProduct(e) {
     current.classList.add("active");
     current.classList.remove("deactive");
     document.querySelector(
-      ".prod-list-ul li:last-child"
+      ".prod-down-arrow"
     ).innerHTML = `<i class="far fa-arrow-alt-circle-down"></i>`;
     document.querySelector(
-      ".prod-list-ul li:first-child"
+      ".prod-up-arrow"
     ).innerHTML = `<i class="fas fa-arrow-alt-circle-up"></i>`;
     // current.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 }
 document.body.onscroll = function() {
   var y = document.body.getBoundingClientRect().y;
-  console.log(y);
   if (y < 30) {
     document.querySelector("html").classList.add("navbar-pt");
     document.querySelector(".navbar-brand").classList.add("navbar-mh");
@@ -181,14 +185,16 @@ window.addEventListener("scroll", function(e) {
 /*--------------------------details button js---------------------- */
 
 var scroll = document.querySelector(".scroll-bar"),
+  scrollElemTop = scroll.getBoundingClientRect(),
   detSlide = document.querySelectorAll(".det-none"),
   prodDetails = document.querySelector(".prod-details");
+console.log(scrollElemTop);
 document.querySelector(".det-btn").addEventListener("click", function(e) {
   var target = this.getAttribute("target");
-  prodDetails.scrollIntoView({
-    behavior: "smooth",
-    block: "nearest"
-  });
+  prodDetails.scrollIntoView({ behavior: "smooth", block: "start" });
+  setTimeout(function() {
+    window.scrollBy(0, -36);
+  }, 500);
   scroll.classList.add("active");
   current.classList.add("smallfont");
   detSlide.forEach((val, ind) => {
