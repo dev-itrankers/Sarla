@@ -2,7 +2,7 @@
 * {
   font-size: 10px;
 }
- /* ============ NAVBAR STYLES ================= */
+/* ============ NAVBAR STYLES ================= */
 a:hover {
   color: #363636 !important;
 }
@@ -53,21 +53,12 @@ a:hover {
   background-color: white;
   color: #afca0b !important;
 }
-.navbar-dropdown {
-  /* left: 50% !important;
-  right: auto;
-  text-align: center;
-  transform: translateX(-50%); */
-}
 .navbar-dropdown a {
   font-size: 0.8em;
 }
-/* 
-.navbar-dropdown-close {
-  left: 0;
-  text-align: start;
-} */
-
+.navbar-link {
+  padding-right: 2.5em;
+}
 .navbar-item:hover,
 .navbar-item.has-dropdown:hover span {
   color: black !important;
@@ -78,9 +69,6 @@ a:hover {
   opacity: 0;
 }
 
-.nav-active {
-  border-bottom: 3px solid #3f893b;
-}
 /* ====================scroll change height=================== */
 .navbar {
   transition: all 250ms ease-in;
@@ -103,7 +91,7 @@ a:hover {
 /* Pranjali navbar contact scroll*/
 
 .nav-active {
-  border-bottom: 3px solid #3f893b;
+  border-bottom: 5px solid #afca0b;
 }
 @keyframes sfade {
   0% {
@@ -128,85 +116,85 @@ a:hover {
   resize: none;
 }
 /*================== YEARS STYLES ================== */
-#timeline li{
-  cursor:pointer;
+#timeline li {
+  cursor: pointer;
 }
-#timeline .hero{
+#timeline .hero {
   width: 100%;
   height: 590px;
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-#timeline .menu{
-height: 250px;
-font-family: Rubik;
-font-size: 1em;
-font-weight: 500;
-line-height: 3.13;
-text-align: right;
+#timeline .menu {
+  height: 250px;
+  font-family: Rubik;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 3.13;
+  text-align: right;
 }
-#timeline .menu ul{
+#timeline .menu ul {
   margin-top: -6em;
 }
-#timeline .active-fontsize{
+#timeline .active-fontsize {
   font-size: 2em;
   line-height: 1.67;
 }
 /*================= YEARS-SECTION =============== */
-#timeline .hero-body p{
+#timeline .hero-body p {
   margin-bottom: 0.5em;
   font-family: Rubik;
   font-size: 1.3em;
   line-height: 1.2;
   word-spacing: 0.1em;
 }
-#timeline .hero-body h1{
+#timeline .hero-body h1 {
   max-width: 466px;
   min-width: 300px;
   font-family: Rubik;
   font-size: 3em;
   line-height: 1.17;
   font-weight: normal;
-  margin-bottom: 0.5em  !important;
+  margin-bottom: 0.5em !important;
 }
-#timeline .years-font{
+#timeline .years-font {
   font-size: 1.5em;
 }
-#timeline .years{
+#timeline .years {
   background-image: url("../images/Timeline-Page/years.png");
 }
-#timeline .years h1{
+#timeline .years h1 {
   font-size: 4em;
 }
-#timeline .years p{
+#timeline .years p {
   font-size: 1.5em;
 }
-#timeline .year-1993{
+#timeline .year-1993 {
   background-image: url("../images/Timeline-Page/1993-95.png");
 }
-#timeline .year-1995{  
+#timeline .year-1995 {
   background-image: url("../images/Timeline-Page/1995.png");
 }
-#timeline .description-1995 span{
+#timeline .description-1995 span {
   display: flex;
 }
-#timeline .year-1996{
+#timeline .year-1996 {
   background-image: url("../images/Timeline-Page/1996.png");
 }
-#timeline .year-1999{ 
+#timeline .year-1999 {
   background-image: url("../images/Timeline-Page/1999.png");
 }
-#timeline .year-2004{ 
+#timeline .year-2004 {
   background-image: url("../images/Timeline-Page/2004-05.png");
 }
-#timeline .year-2007{ 
+#timeline .year-2007 {
   background-image: url("../images/Timeline-Page/2007-08.png");
 }
-#timeline .year-2009{ 
+#timeline .year-2009 {
   background-image: url("../images/Timeline-Page/2009-2010.png");
 }
-#timeline .year-2012{ 
+#timeline .year-2012 {
   background-image: url("../images/Timeline-Page/2013-14.png");
 }
 
@@ -434,19 +422,18 @@ ul {
   resize: none;
 }
 
- 
 /*=================================== MEDIA QUERIES =================================*/
 @media screen and (max-width: 768px) {
-  #timeline  .hero {
-   background-size: cover;
+  #timeline .hero {
+    background-size: cover;
   }
-  #timeline .hero-body h1{
+  #timeline .hero-body h1 {
     font-size: 2em;
   }
- #timeline .years h1{
+  #timeline .years h1 {
     font-size: 2.5em;
   }
- footer {
+  footer {
     height: auto;
     padding: 10% 15%;
   }
@@ -459,55 +446,55 @@ ul {
 }
 
 @media screen and (max-width: 480px) {
-#timeline  .hero {
-  width: min-content;
-  background-size: cover;
-}
-#timeline .hero-body h1{
-  font-size: 2em;
-}
-#timeline .hero-body p{
-  font-size: 1.2em;
-}
-#timeline .years h1{
-  font-size: 2.2em;
-}
-#timeline .menu{
-  font-size: 0.5em;
-}
-#timeline .active-fontsize{
-  font-size: 1.5em;
-}
-footer {
-  padding: 10% 10%;
-  height: 100%;
-}
-.footer {
-  display: block;
-  padding: 0 !important;
-}
-.contact-form {
-  margin-top: 30px !important;
-}
-.submit-btn {
-  margin-top: 20px;
-}
-.wd-325 {
-  width: 100% !important;
-}
-.contact-form {
-  margin: 0 0rem 0 0rem;
-}
-.copyright {
-  margin-top: 50px;
-  margin-bottom: 0px;
-}
+  #timeline .hero {
+    width: min-content;
+    background-size: cover;
+  }
+  #timeline .hero-body h1 {
+    font-size: 2em;
+  }
+  #timeline .hero-body p {
+    font-size: 1.2em;
+  }
+  #timeline .years h1 {
+    font-size: 2.2em;
+  }
+  #timeline .menu {
+    font-size: 0.5em;
+  }
+  #timeline .active-fontsize {
+    font-size: 1.5em;
+  }
+  footer {
+    padding: 10% 10%;
+    height: 100%;
+  }
+  .footer {
+    display: block;
+    padding: 0 !important;
+  }
+  .contact-form {
+    margin-top: 30px !important;
+  }
+  .submit-btn {
+    margin-top: 20px;
+  }
+  .wd-325 {
+    width: 100% !important;
+  }
+  .contact-form {
+    margin: 0 0rem 0 0rem;
+  }
+  .copyright {
+    margin-top: 50px;
+    margin-bottom: 0px;
+  }
 
-.footer-submit-btn {
-  font-size: 0.85rem;
-  width: 110px;
-  height: 40px;
-}
+  .footer-submit-btn {
+    font-size: 0.85rem;
+    width: 110px;
+    height: 40px;
+  }
 }
 
 /* body{

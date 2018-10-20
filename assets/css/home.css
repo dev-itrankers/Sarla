@@ -78,21 +78,10 @@ a:hover {
   background-color: white;
   color: #afca0b !important;
 }
-.navbar-dropdown {
-  /* left: 50% !important;
-    right: auto;
-    text-align: center;
-    transform: translateX(-50%); */
-}
 
 .navbar-dropdown a {
   font-size: 0.8em;
 }
-/* 
-  .navbar-dropdown-close {
-    left: 0;
-    text-align: start;
-  } */
 
 .navbar-item:hover,
 .navbar-item.has-dropdown:hover span {
@@ -105,11 +94,8 @@ a:hover {
 }
 
 .nav-active {
-  border-bottom: 3px solid #3f893b;
+  border-bottom: 3px solid #afca0b;
 }
-/* .active {
-  border-bottom: 3px solid #3f893b;
-} */
 /* ==============================explore button================================  */
 .explore-btn {
   width: 150px;
@@ -612,6 +598,9 @@ ul {
 /* ============================media queries========================= */
 
 @media screen and (max-width: 480px) {
+  body {
+    height: 80%;
+  }
   .Product-range-content,
   .facilities-content {
     padding-left: 8%;

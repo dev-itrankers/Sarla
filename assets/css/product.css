@@ -4,7 +4,7 @@ body {
   /* width: 1024px; */
   /* margin: 0 auto; */
   font-size: 10px;
-  font-family: "Rubik", sans-serif;
+  /* font-family: "Rubik"; */
   /* overflow-y: hidden !important; */
   /* overflow-x: hidden; */
 }
@@ -17,7 +17,10 @@ a:hover {
 .navbar ul {
   display: flex;
   align-content: space-between;
-  font-family: Rubik-Regular;
+  /* font-family: Rubik-Regular; */
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
   font-size: 1em;
 }
 .stoke > ul > li:first-child {
@@ -40,7 +43,7 @@ a:hover {
   font-weight: 400 !important;
 }
 .border {
-  border-bottom: 0.1rem solid #e9e9e9;
+  box-shadow: 0px 2px #e9e9e9;
 }
 .navbar-link::after {
   border-color: black;
@@ -53,6 +56,9 @@ a:hover {
   border-radius: 0.5em;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
+/* .navbar-item {
+  font-size: 10px;
+} */
 .dropdown-nav-item {
   font-size: 1em !important;
 }
@@ -60,22 +66,12 @@ a:hover {
   background-color: white;
   color: #afca0b !important;
 }
-.navbar-dropdown {
-  /* left: 50% !important;
-  right: auto;
-  text-align: center;
-  transform: translateX(-50%); */
-}
-
 .navbar-dropdown a {
   font-size: 0.8em;
 }
-/* 
-.navbar-dropdown-close {
-  left: 0;
-  text-align: start;
-} */
-
+.navbar-link {
+  padding-right: 2.5em;
+}
 .navbar-item:hover,
 .navbar-item.has-dropdown:hover span {
   color: black !important;
@@ -86,10 +82,29 @@ a:hover {
   opacity: 0;
 }
 
-.nav-active {
-  border-bottom: 3px solid #3f893b;
+.navbar {
+  transition: all 250ms ease-in;
+}
+.navbar-mh {
+  min-height: 2.25rem;
 }
 
+.navbar-pt {
+  padding-top: 2.25rem;
+}
+
+.navbar-item-p {
+  padding: 0 0.75rem;
+}
+
+.navbar-burger-h {
+  height: 2.25rem;
+}
+/* Pranjali navbar contact scroll*/
+
+.nav-active {
+  border-bottom: 5px solid #afca0b;
+}
 /* ==========================================hero================================= */
 .hero {
   background-image: url(../images/product-hero.jpg);
@@ -167,6 +182,7 @@ a:hover {
 }
 .det-arrow {
   margin-left: 1em;
+  animation: move-arrow infinite 0.5s forwards;
 }
 .det-btn {
   display: flex;
@@ -423,8 +439,10 @@ ul {
   margin-top: 18px;
 }
 .phone-no > ul > li:last-child {
-  border-bottom: 1px solid black;
   display: inline;
+}
+.phone-no > ul > li:last-child:hover {
+  border-bottom: 1px solid black;
 }
 .quick-links {
   height: 155px;
@@ -517,11 +535,6 @@ ul {
 
 .navbar-burger-h {
   height: 2.25rem;
-}
-/* Pranjali navbar contact scroll*/
-
-.nav-active {
-  border-bottom: 3px solid #3f893b;
 }
 
 /* ----------------------------------------------------------------- */
@@ -725,6 +738,14 @@ ul {
   }
   to {
     transform: translateX(0%);
+  }
+}
+@keyframes move-arrow {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(70%);
   }
 }
 .det-animate-1 {
