@@ -15,6 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// document
+//   .querySelector(".navbar-start > .has-dropdown")
+//   .addEventListener("click", function() {
+//     this.className += " mobile-nav-dropdown";
+//   });
+
 var header = document.querySelector(".prod-list-ul");
 var links = header.querySelector(".deactive > a");
 for (var i = 0; i < links.length; i++) {
